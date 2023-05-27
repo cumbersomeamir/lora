@@ -10,12 +10,12 @@ import bitsandbytes as bnb
 from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
-    "facebook/opt-6.7b", 
+    "huggyllama/llama-7b", 
     load_in_8bit=True, 
     device_map='auto',
 )
 
-tokenizer = AutoTokenizer.from_pretrained("Amirkid/llama-lora-spotify")
+tokenizer = AutoTokenizer.from_pretrained("huggyllama/llama-7b")
 
 
 for param in model.parameters():
@@ -78,7 +78,7 @@ trainer = transformers.Trainer(
         per_device_train_batch_size=4, 
         gradient_accumulation_steps=1,
         warmup_steps=500, 
-        max_steps=1000, 
+        max_steps=200, 
         learning_rate=1e-5, 
         fp16=True,
         logging_steps=1, 
