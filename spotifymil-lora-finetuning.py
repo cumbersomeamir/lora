@@ -89,5 +89,5 @@ model.config.use_cache = False  # silence the warnings. Please re-enable for inf
 trainer.train()
 
 
-
+token = "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"
 model.push_to_hub("Amirkid/llama-lora-spotify", use_auth_token=True)
