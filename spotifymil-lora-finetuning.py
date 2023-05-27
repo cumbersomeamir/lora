@@ -1,4 +1,4 @@
-#!pip install -q bitsandbytes datasets accelerate loralib
+#!pip3 install -q bitsandbytes datasets accelerate loralib
 #!pip3 install -q git+https://github.com/huggingface/transformers.git@main git+https://github.com/huggingface/peft.git
 
 
