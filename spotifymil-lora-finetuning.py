@@ -1,6 +1,5 @@
-#!pip3 install -q bitsandbytes datasets accelerate loralib
+#!pip3 install -q bitsandbytes datasets accelerate loralib scikit-learn
 #!pip3 install -q git+https://github.com/huggingface/transformers.git@main git+https://github.com/huggingface/peft.git
-
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
