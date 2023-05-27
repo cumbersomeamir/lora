@@ -15,7 +15,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map='auto',
 )
 
-tokenizer = AutoTokenizer.from_pretrained("facebook/opt-6.7b")
+tokenizer = AutoTokenizer.from_pretrained("Amirkid/llama-lora-spotify")
 
 
 for param in model.parameters():
@@ -91,4 +91,4 @@ trainer.train()
 
 
 
-model.push_to_hub("Amirkid/spotify-v1", use_auth_token=True)
+model.push_to_hub("Amirkid/llama-lora-spotify", use_auth_token=True)
